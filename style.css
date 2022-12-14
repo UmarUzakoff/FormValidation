@@ -1,0 +1,255 @@
+html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    font-family: 'Alata', sans-serif;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 70px 20px;
+    max-width: 1110px;
+  }
+
+  .section {
+    background: url(/img/bg-intro-desktop.png);
+    background-color: rgb(218, 112, 129);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 15px;
+  }
+
+  .text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
+  p{
+    font-size: 23px;
+  }
+  
+  .login-box {
+    width: 500px;
+    padding: 40px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+  .head {
+    max-width: 500px;
+    background-color: purple;
+    border-radius: 7px;
+    padding: 3px 2px;
+    font-size: 14px;
+    text-align: center;
+    color: aliceblue;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+      ),
+      conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+    animation: bg-spin 3s linear infinite;
+    }
+
+    @keyframes bg-spin {
+      to {
+        --border-angle: 1turn;
+      }
+    }
+  
+    .head:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+
+  .error-msg, .error-msg1, .error-msg2, .error-msg3 {
+    padding-bottom: 10px;
+    color: red;
+    font-size: 8px;
+    display: block;
+  }
+
+  .error-msg--hidden, .error-msg--hidden1, .error-msg--hidden2, .error-msg--hidden3 {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    all: unset;
+    background-color: rgb(28, 180, 28);
+    padding: 10px 95px;
+    font-size: 20px;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    border: 5px solid rgb(28, 180, 28);
+    border-radius: 7px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    position: relative;
+  }
+
+  button:hover{
+    opacity: 0.8;
+    color: rgb(255, 255, 255);
+  }
+
+   button::after,
+   button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+   }
+
+   button::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: rgb(28, 180, 28);
+    border-radius: 10px;
+   }
+
+   button::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: rgb(141, 216, 141);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+
+  button:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+
+  button:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+
+  button:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+
+  .result {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    color: rgb(255, 255, 255);
+    max-width: 1000px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 112, 129);
+    opacity: 0.3;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+ @media (max-width: 450px) {
+    .container{
+        max-width: 430px;
+    }
+
+    .section{
+        flex-direction: column;
+        background: url(/img/bg-intro-mobile.png);
+        background-color: rgb(218, 112, 129);
+    }
+
+    .text, .login-box{
+        max-width: 350px;
+    }
+
+    button{
+        padding: 10px 30px;
+    }
+
+    .result {
+        max-width: 350px;
+    }
+ }

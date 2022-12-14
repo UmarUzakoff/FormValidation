@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+    <div class="section container">
+
+        <div class="text">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+        </div>
+
+        <div class="login-box">
+
+            <div class="head">
+                <h2>
+                    <strong>Try it free 7 days</strong> then $20/mo. thereafter
+                </h2>
+            </div>
+
+            <br>
+    
+            <form id="form">
+              <div class="user-box">
+                <input type="text" id="name-input" required>
+                <label>Name</label>
+                <span class="error-msg error-msg--hidden">Must contain at least 4 letters!</span>
+              </div>
+              <div class="user-box">
+                <input type="text" id="surname-input" required>
+                <label>Surname</label>
+                <span class="error-msg1 error-msg--hidden1">Must contain at least 4 letters!</span>
+              </div>
+              <div class="user-box">
+                <input type="email" id="email-input" required>
+                <label>E-mail</label>
+                <span class="error-msg2 error-msg--hidden2">Must contain at least 4 letters!</span>
+              </div>
+              <div class="user-box">
+                <input type="password" id="password-input" required="">
+                <label>Password</label>
+                <span class="error-msg3 error-msg--hidden3">Must contain at least 4 letters!</span>
+              </div>
+              <button>
+                Claim your free trial
+              </button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="xexe" id="resultat">
+        <span id="result1"></span>
+        <span id="result2"></span>
+        <span id="result3"></span>
+        <span id="result4"></span>
+    </div>
+
+    
+    
+    <script src="/index.js"></script>
+</body>
+</html>
